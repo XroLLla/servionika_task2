@@ -7,8 +7,10 @@ import qcow_file_info
 
 def main(in_cotalogue, file_json):
     old_info = file_operation.read_json(file_json)
+    # check availability of file with information about json files
     if old_info is not None:
         list_of_file_info = qcow_file_info.get_list(in_cotalogue, file_json)
+        # check path to catalog
         if list_of_file_info is not None:
             list_of_file_info = file_compare.compare_files_name(
                 list_of_file_info,

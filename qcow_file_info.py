@@ -66,21 +66,15 @@ def snapshots_info(b_fileqcow, snap_offset):
 def get_list(in_cotalogue, filejson):
     # check path to cotalogue
     if os.path.exists(in_cotalogue):
-        if os.path.isfile(filejson):
-            # check path to out_file
-            list_of_dict = []
-            for d, dirs, files in os.walk(in_cotalogue):
-                for f in files:
-                    with open(os.path.join(d, f), "rb") as binary_file:
-                        # check qcow2 file
-                        byte = binary_file.read(3)
-                        if byte == "QFI":
-                            fileqcow = os.path.join(d, f)
-                            list_of_dict.append(get_qcow_file_dict(fileqcow))
-
-        else:
-            print "Wrong path to the file"
-            return None
+        list_of_dict = []
+        for d, dirs, files in os.walk(in_cotalogue):
+            for f in files:
+                with open(os.path.join(d, f), "rb") as binary_file:
+                    # check qcow2 file
+                    byte = binary_file.read(3)
+                    if byte == "QFI":
+                        fileqcow = os.path.join(d, f)
+                        list_of_dict.append(get_qcow_file_dict(fileqcow))
     else:
         print "No such directory"
         return None
