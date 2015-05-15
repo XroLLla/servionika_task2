@@ -1,0 +1,31 @@
+[
+  {
+    "filename": "/Users/Xrono/Desktop/python/new/cir2.img", 
+    "size": 13167616, 
+    "virtualsize": 41126400, 
+    "backing_file": "disk1.img"
+  }, 
+  {
+    "filename": "/Users/Xrono/Desktop/python/new/ss-2.img", 
+    "size": 16318464, 
+    "virtualsize": 1073741824, 
+    "backing_file": "disk1.img", 
+    "snapshots": [
+      {
+        "id": "2", 
+        "name": "second1", 
+        "virtualsize": 0
+      }, 
+      {
+        "id": "3", 
+        "name": "thirdthird1", 
+        "virtualsize": 1
+      }, 
+      {
+        "id": "4", 
+        "name": "fourthfourth", 
+        "virtualsize": 1
+      }
+    ]
+  }
+]
