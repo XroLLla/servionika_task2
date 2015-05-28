@@ -63,7 +63,7 @@ def snapshots_info(b_fileqcow, snap_offset):
     return (snap_dict, len_of_ss)
 
 
-def get_list(in_cotalogue, filejson):
+def get_list(in_cotalogue):
     # check path to cotalogue
     if os.path.exists(in_cotalogue):
         list_of_dict = []
